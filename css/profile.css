@@ -172,17 +172,17 @@ ul li {
 
 /*Back button*/
 
-/* .test{
+.test{
   display: flex;
   align-items: center;
   justify-content: center;
-  min-width: 1000px;
+  min-width: 940px;
 }
 
 .back{
   padding-bottom: 0.5rem;
-  width: 970px;
-} */
+  width: 920px;
+}
 
 .btn {
   line-height: 50px;
@@ -271,5 +271,11 @@ span {
   .title {
     display: flex;
     min-width: 500px;
+  }
+  .test{
+    min-width: 500px;
+  }
+  .back{
+    width: 490px;
   }
 }

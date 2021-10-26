@@ -11,14 +11,19 @@
 </head>
 
 <body>
-    <a href="../" class="btn btn-one"> <span>BACK</span> </a>
+    <div class="test">
+        <div class="back"><a href="../" class="btn btn-one"> <span>BACK</span> </a></div>
+
+    </div>
 
     <div class="title">
         <h2>{{.Name}}</h2>
     </div>
+
+
+
+
     <div class="wrapper">
-
-
         <div class="profile">
             <img class="profile__img" src={{.Image}} alt="band">
         </div>
@@ -34,7 +39,7 @@
             <h3>Members:</h3>
             <ul>
                 {{ range .Members }}
-                <li class="test">{{.}}</li>
+                <li>{{.}}</li>
                 {{end}}
             </ul>
         </div>
@@ -45,7 +50,7 @@
             {{range $key, $value := .Relations}}
             <table>
                 <tr class="location">
-                    <td>{{$key}} &#9660</td>
+                    <td><u>{{$key}} &#9660</u></td>
                 <tr>
                 <tr class="date">
                     <td>

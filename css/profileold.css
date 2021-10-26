@@ -68,7 +68,10 @@
 body {
   background: var(--colour-body-background);
   padding-left: 80px;
+  padding-right: 80px;
   font-family: var(--font);
+  size: fit-content;
+  min-width: 1150px;
 }
 
 /* Wrapper */
@@ -77,6 +80,12 @@ body {
   overflow: hidden;
   display: flex;
   justify-content: center;
+  min-width: 1000px;
+}
+
+.wrapper div {
+  padding: 10px;
+  border: double #776c6c 10px;
 }
 
 /* Title CSS */
@@ -85,6 +94,7 @@ body {
   padding-bottom: 50px;
   display: flex;
   justify-content: center;
+  min-width: 1000px;
 }
 
 h2 {
@@ -96,6 +106,10 @@ h2 {
 
 /*Image*/
 
+.profile {
+  flex-direction: left;
+}
+
 .profile__img {
   display: block;
   margin-left: auto;
@@ -106,12 +120,11 @@ h2 {
 /*Information*/
 
 .text {
-  float: left;
   list-style: inside;
   padding-left: 3rem;
   padding-right: 5rem;
   overflow: hidden;
-  min-width: 250px;
+  min-width: 300px;
 }
 
 h3 {
@@ -129,8 +142,9 @@ p {
 
 /*Concerts*/
 
-table{
+table {
   font-family: var(--font);
+  color: #43464b;
 }
 
 .concerts {
@@ -149,15 +163,26 @@ ul li {
 
 .date {
   visibility: collapse;
+  font-size: 0.75rem;
 }
 
-
-.location:hover ~ .date{
+.location:hover~.date {
   visibility: visible;
 }
 
-
 /*Back button*/
+
+.test{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 940px;
+}
+
+.back{
+  padding-bottom: 0.5rem;
+  width: 920px;
+}
 
 .btn {
   line-height: 50px;
@@ -176,7 +201,7 @@ span {
   color: #FFF;
   transition: all 0.3s;
   position: relative;
-  top: 10px;
+  top: 1rem;
 }
 
 .btn-one span {
@@ -231,7 +256,26 @@ span {
 /* If the viewport size changes: */
 
 @media only screen and (max-width: 800px) {
-  .profile__img {
+  body {
+    size: fit-content;
+    min-width: 580px;
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+  .profile {
     display: none;
+  }
+  .wrapper {
+    min-width: 500px;
+  }
+  .title {
+    display: flex;
+    min-width: 500px;
+  }
+  .test{
+    min-width: 500px;
+  }
+  .back{
+    width: 490px;
   }
 }
