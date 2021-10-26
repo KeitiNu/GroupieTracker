@@ -56,8 +56,6 @@
 :root {
   --colour-body-background: #c5b6b4;
   --font: 'Oswald', sans-serif;
-  --small-size: 500px;
-  --large-size: calc(2*var(--small-size));
 }
 
 *, :after, :before {
@@ -81,7 +79,7 @@ body {
   overflow: hidden;
   display: flex;
   justify-content: center;
-  min-width: var(--large-size);
+  min-width: 1000px;
 }
 
 .wrapper div {

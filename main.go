@@ -68,7 +68,8 @@ func ArtistHandler(w http.ResponseWriter, r *http.Request) {
 			}
 		}
 
-		http.Error(w, "404 page not found.", http.StatusNotFound)
+		t, _ = template.ParseFiles("templates/error.html")
+		t.Execute(w, http.StatusNotFound)	
 		return
 	} else {
 		http.Error(w, "400: bad request.", http.StatusBadRequest)
