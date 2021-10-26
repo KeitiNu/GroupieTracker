@@ -67,9 +67,12 @@
 
 body {
   background: var(--colour-body-background);
+  padding-left: 80px;
+  padding-right: 80px;
   font-family: var(--font);
+  size: fit-content;
+  min-width: 1150px;
 }
-
 
 /* Wrapper */
 
@@ -77,14 +80,13 @@ body {
   overflow: hidden;
   display: flex;
   justify-content: center;
-  min-width: 990px;
+  min-width: 1000px;
 }
 
-.wrapper div{
+.wrapper div {
   padding: 10px;
-  border: double #776c6c  10px;
+  border: double #776c6c 10px;
 }
-
 
 /* Title CSS */
 
@@ -93,7 +95,6 @@ body {
   display: flex;
   justify-content: center;
   min-width: 1000px;
-
 }
 
 h2 {
@@ -105,7 +106,9 @@ h2 {
 
 /*Image*/
 
-
+.profile {
+  flex-direction: left;
+}
 
 .profile__img {
   display: block;
@@ -139,14 +142,14 @@ p {
 
 /*Concerts*/
 
-table{
+table {
   font-family: var(--font);
   color: #43464b;
 }
 
 .concerts {
   overflow: hidden;
-  min-width: 250px;
+  min-width: 200px;
   list-style-position: inside
 }
 
@@ -161,32 +164,25 @@ ul li {
 .date {
   visibility: collapse;
   font-size: 0.75rem;
-
 }
 
-
-
-.location:hover ~ .date{
+.location:hover~.date {
   visibility: visible;
 }
 
-
 /*Back button*/
 
-.test{
-  border: springgreen solid 2px;
+/* .test{
   display: flex;
   align-items: center;
   justify-content: center;
-  max-width: 990px;
+  min-width: 1000px;
 }
 
 .back{
-  border: red solid 2px;
-
   padding-bottom: 0.5rem;
-  width: 990px;
-}
+  width: 970px;
+} */
 
 .btn {
   line-height: 50px;
@@ -194,7 +190,6 @@ ul li {
   text-align: center;
   width: 250px;
   cursor: pointer;
-  
 }
 
 span {
@@ -261,24 +256,20 @@ span {
 /* If the viewport size changes: */
 
 @media only screen and (max-width: 800px) {
+  body {
+    size: fit-content;
+    min-width: 580px;
+    padding-left: 40px;
+    padding-right: 40px;
+  }
   .profile {
     display: none;
   }
-  .wrapper{
-    display: flex;
+  .wrapper {
     min-width: 500px;
   }
-  .title{
+  .title {
     display: flex;
     min-width: 500px;
-  }
-  .test{
-    max-width: 1000px;
-    overflow: hidden;
-  }
-  .back{
-    max-width: 1000px;
-    overflow: hidden;
-
   }
 }
