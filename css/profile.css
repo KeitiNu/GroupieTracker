@@ -54,9 +54,10 @@
 }
 
 :root {
-  --base-grid: 8px;
   --colour-body-background: #c5b6b4;
   --font: 'Oswald', sans-serif;
+  --small-size: 500px;
+  --large-size: calc(2*var(--small-size));
 }
 
 *, :after, :before {
@@ -80,7 +81,7 @@ body {
   overflow: hidden;
   display: flex;
   justify-content: center;
-  min-width: 1000px;
+  min-width: var(--large-size);
 }
 
 .wrapper div {
@@ -149,7 +150,7 @@ table {
 
 .concerts {
   overflow: hidden;
-  min-width: 200px;
+  min-width: 250px;
   list-style-position: inside
 }
 
@@ -176,12 +177,12 @@ ul li {
   display: flex;
   align-items: center;
   justify-content: center;
-  min-width: 940px;
+  min-width: 990px;
 }
 
 .back{
   padding-bottom: 0.5rem;
-  width: 920px;
+  width: 970px;
 }
 
 .btn {
@@ -258,7 +259,7 @@ span {
 @media only screen and (max-width: 800px) {
   body {
     size: fit-content;
-    min-width: 580px;
+    min-width: 630px;
     padding-left: 40px;
     padding-right: 40px;
   }
@@ -266,16 +267,16 @@ span {
     display: none;
   }
   .wrapper {
-    min-width: 500px;
+    min-width: 550px;
   }
   .title {
     display: flex;
-    min-width: 500px;
+    min-width: 550px;
   }
   .test{
-    min-width: 500px;
+    min-width: 550px;
   }
   .back{
-    width: 490px;
+    width: 540px;
   }
 }
