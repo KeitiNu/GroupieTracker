@@ -50,9 +50,10 @@
             {{range $key, $value := .Relations}}
             <table>
                 <tr class="location">
-                    <td><u>{{$key}} &#9660</u></td>
+                    <td><a href="#{{$key}}"><u>&#9660 {{$key}}</u></a></td>
+
                 <tr>
-                <tr class="date">
+                <tr class="date" id="{{$key}}">
                     <td>
                         {{range $value}}
                         <ul>

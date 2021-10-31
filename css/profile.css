@@ -56,6 +56,8 @@
 :root {
   --colour-body-background: #c5b6b4;
   --font: 'Oswald', sans-serif;
+  --font-color:  #43464b;
+
 }
 
 *, :after, :before {
@@ -163,22 +165,33 @@ ul li {
 .date {
   visibility: collapse;
   font-size: 0.75rem;
+
 }
 
-.location:hover~.date {
+tr:target {
   visibility: visible;
+}
+
+a:link, a:visited{
+font-family: var(--font);
+color: var(--font-color);
+font-weight: 0;
+}
+
+.check:checked + u{
+background-color: red;
 }
 
 /*Back button*/
 
-.test{
+.test {
   display: flex;
   align-items: center;
   justify-content: center;
   min-width: 990px;
 }
 
-.back{
+.back {
   padding-bottom: 0.5rem;
   width: 970px;
 }
@@ -271,10 +284,10 @@ span {
     display: flex;
     min-width: 550px;
   }
-  .test{
+  .test {
     min-width: 550px;
   }
-  .back{
+  .back {
     width: 540px;
   }
 }
